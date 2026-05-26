@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <link rel="icon" type="image/png" href="Boussole sante favicon.png">
+      <title>
+          Boussole santé - Conditionnement
+      </title>
+      <style>
+          .body {
+              background-color: #fbfae4;
+              cursor: url("curseur.png"), auto;
+              min-height: 100vh;
+              margin: 0px;
+           }
+          a:link {
+              text-decoration: none;
+              color: white;
+           }
+          a:hover {
+              cursor: url("curseur2.png") 8 2, pointer;
+           }
+          a:active {
+              cursor: url("curseur2.png") 8 2, pointer;
+           }
+          a:visited {
+              color: white;
+           }
+          p, h1, h2, h3, span, label {
+              cursor: url('curseur3.png') 4 16, text !important;
+           }
+          ::selection {
+              background: #f5a66e;
+              color: #333333;
+           }
+          ::-moz-selection {
+          background: #f5a66e;
+          color: #333333;
+           }
+          #loader {
+              z-index: 9999;
+              background-color: #37858f;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              position: fixed;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: opacity 1s ease-out;
+           }
+          #spinner {
+              width: 40vw;
+              height: auto;
+           }
+          .barreHaut {
+              background-color: #14545e;
+              position: fixed;
+              top: 0;
+              left: 0;
+              z-index: 1000;
+              width: 100vw;
+              height: auto;
+              padding: 0px;
+           }
+          .boutonHaut {
+              animation: entrée 1s;
+              display: inline-block;
+              background-color: #37858f;
+              color: white;
+              padding: 10px 20px;
+              text-decoration: none;
+              border-radius: 20px;
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              cursor: pointer;
+              transition: padding 0.4s;
+           }
+          .boutonHome {
+              animation: entrée 1s;
+              display: inline-block;
+              background-color: #f09813;
+              color: white;
+              padding: 10px 20px;
+              text-decoration: none;
+              border-radius: 20px;
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              cursor: pointer;
+              transition: padding 0.4s;
+           }
+          .boutonHaut:hover {
+              padding: 10px 30px;
+           }
+          .boutonHome:hover {
+              padding: 10px 30px;
+           }
+          .table {
+              border-collapse: separate;
+           }
+          .celluleCote {
+              font-size: clamp(0.7rem, 2vw, 1rem);
+              white-space: nowrap;
+           }
+          .celluleMilieu {
+              padding: 5vh 5vw;
+              border: none;
+              font-size: clamp(0.7rem, 2vw, 1rem);
+              white-space: nowrap;
+           }
+          .barreArrière {
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: auto;
+              padding: 0px;
+           }
+          .blocTexte {
+              background-image: url("Bloc texte.png");
+              background-size: cover;
+              background-position: center;
+              background-attachment: fixed;
+              width: 100%;
+              box-sizing: border-box;
+              padding: 30px 5px;
+              color: white;
+              font-family: Arial, sans-serif;
+              font-size: 5vw;
+              font-weight: bold;
+              white-space: nowrap;
+           }
+          .boussoleO {
+              height: 0.8em;
+              width: auto;
+              vertical-align: middle;
+              margin: 0px 0.5px;
+           }
+          .blocInfo {
+              background-color: #37858f;
+              background-size: cover;
+              width: 100%;
+              box-sizing: border-box;
+              color: white;
+              font-family: Arial, sans-serif;
+              font-size: clamp(1rem, 2vw, 1.4rem);
+              font-weight: bold;
+              padding: 30px;
+              line-height: 170%;
+           }
+          .photoInfo {
+              width: 25vw;
+              height: auto;
+              padding: 5px;
+           }
+          .titreInfo {
+              font-family: Arial, sans-serif;
+              font-size: 3vw;
+              font-weight: bold;
+              white-space: nowrap;
+           }
+          .barreBas {
+              background-color: #14545e;
+              background-size: cover;
+              width: 100%;
+              box-sizing: border-box;
+              height: auto;
+              padding: 10px 0px;
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              color: white;
+              font-size: clamp(0.7rem, 2vw, 1rem);
+              white-space: nowrap;
+           }
+      </style>
+  </head>
+<body class = "body">
+    <div id = "loader">
+        <img src = "Boussole santé spinner.gif" id = "spinner" alt = "Spinner">
+        <script>
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    document.getElementById("loader").style.opacity = "0";
+                    setTimeout(() => { loader.style.display = "none"; }, 1000);
+                }, 1200);
+            });
+        </script>
+    </div>
+    <div class = "barreHaut">
+        <center>
+            <table class = "table">
+                <tr>
+                    <td class = "celluleCote">
+                        <a href = "Boussole santé - Alimentation.html" class = "boutonHaut">Alimentation</a>
+                    </td>
+                    <td class = "celluleMilieu">
+                        <a href = "index.html" class = "boutonHome">Accueil</a>
+                    </td>
+                    <td class = "celluleCote">
+                        <a href = "Boussole santé - Consommation.html" class = "boutonHaut">Consommation</a>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    <div class = "barreArrière">
+        <center>
+            <table class = "table">
+                <tr>
+                    <td class = "celluleCote">
+                        <span class = "boutonHaut" style = "opacity: 0;">Alimentation</span>
+                    </td>
+                    <td class = "celluleMilieu">
+                        <span class = "boutonHaut" style = "opacity: 0;">Conditionnement</span>
+                    </td>
+                    <td class = "celluleCote">
+                        <span class = "boutonHaut" style = "opacity: 0;">Consommation</span>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    <div class = "blocTexte">
+        <center>
+            <p>
+                Conditi<img src = "Boussole o.png" class = "boussoleO" alt = "o">nnement
+            </p>
+        </center>
+    </div>
+    <div class = "blocInfo">
+        <p>Le conditionnement physique est très important pour rester en santé. Il comprend trois composantes essentielles. Nous allons en parler, en plus de mentionner l'importance de s'échauffer avant un entraînement pour éviter les blessures.</p>
+        <center><p class = "titreInfo">Trois composantes</p></center>
+        <center><img src = "Conditionnement.png" class = "photoInfo" alt = "Musculation"></center>
+        <p>Les trois composantes essentielles au conditionnement physique sont l'endurance, la force et la souplesse.</p>
+        <p>L'endurance est la capacité de ton corps à soutenir un effort physique pendant une longue période de temps. L'endurance se travaille, notamment à l'aide d'exercices de respiration profonde (c'est-à-dire respirer de son ventre et non de sa poitrine), ou bien la course.</p>
+        <p>La force, surtout la force musculaire, désigne l'énergie de tes muscles. Elle peut aussi se travailler, surtout grâce à la musculation, qui regroupe diverses activités désignées à renforcer les muscles.</p>
+        <p>Finalement, la souplesse. La souplesse est l'élasticité de tes muscles et de tes tendons, en plus de l'amplitude de mouvement de tes articulation. Le yoga est une bonne façon de travailler la souplesse.</p>
+        <p>Pour créer un plan d'entraînement rapide, vaut mieux avoir quelques exercices pour chaque composante, ou, si tu as le temps, tu peux te concenter sur une composante, en ayant trois programmes par semaine. Plus important encore, tu dois te fixer un objectif.</p>
+        <center><p class = "titreInfo">L'importance de l'échauffement</p></center>
+        <center><img src = "Échauffement.png" class = "photoInfo" alt = "L'importance de l'échauffement"></center>
+        <p>L'échauffement est une partie très importante d'un entraînement. L'échauffement permet de te préparer physiquement et mentalement à ton entraînement. Il ne faut surtout pas le sauter, car il minimise le risque des blessures en faisant pomper le sang et en régulant dès le départ la respiration. L'échauffement te prépare aussi mentalement, en commençant l'entraînement de manière plus douce.</p>
+    </div>
+    <div class = "barreBas">
+        <center>
+            <span>
+                © 2026 Boussole santé. Tous droits réservés.
+            </span>
+        </center>
+    </div>
+</body>
+</html>
